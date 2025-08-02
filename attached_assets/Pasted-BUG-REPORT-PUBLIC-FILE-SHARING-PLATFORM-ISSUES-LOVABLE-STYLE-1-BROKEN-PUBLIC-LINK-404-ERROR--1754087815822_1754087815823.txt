@@ -1,0 +1,71 @@
+BUG REPORT: PUBLIC FILE SHARING PLATFORM ISSUES (LOVABLE-STYLE)
+
+1. BROKEN PUBLIC LINK (404 ERROR)
+---------------------------------
+- URL:
+  https://preview--secure-share-stream-68.lovable.app/receive/
+
+- Issue:
+  Visiting the public share link returns a 404 Page Not Found error.
+
+- Possible Cause:
+  The /receive/ route may not be correctly defined in the frontend router or backend controller.
+
+- Fix Suggestion:
+  • Check route definition in frontend (React/Next/router or similar).
+  • Confirm dynamic file ID or token is passed correctly in the URL.
+
+------------------------------------------------------
+
+2. FUNCTION crypt(text, text) DOESN'T EXIST ERROR
+-------------------------------------------------
+- Issue:
+  When accessing a password-protected file, this error is shown:
+  "function crypt(text, text) does not exist"
+
+- Possible Cause:
+  • Cryptographic function is undefined or incorrectly used.
+  • Wrong function name or arguments.
+  • Missing import for crypto library.
+
+- Fix Suggestion:
+  • Replace with properly defined function like:
+    encrypt(text, password) or decrypt(text, password)
+  • Use a library like crypto-js, bcrypt, or native crypto.
+  • Ensure the function is imported and called correctly.
+
+------------------------------------------------------
+
+3. EMAIL NOT SENT WHEN USING EMAIL SHARE
+----------------------------------------
+- Issue:
+  Backend doesn't send email to recipient when using email share feature.
+
+- Possible Causes:
+  • No backend email handler implemented (e.g., NodeMailer, SendGrid).
+  • SMTP or API misconfigured.
+  • Missing logs or no response handling.
+
+- Fix Suggestion:
+  • Add email sending functionality to backend.
+  • Use a verified sender (SMTP or API).
+  • Log email delivery status and show confirmation in UI.
+
+------------------------------------------------------
+
+4. PEDDLE (PADDLE) PAYMENT SUBSCRIPTION ERROR
+---------------------------------------------
+- Issue:
+  App shows “Subscription error” during payment process.
+
+- Possible Causes:
+  • Incorrect API key, client_secret, or vendor_id.
+  • Authentication header malformed.
+  • Product ID mismatch or inactive.
+
+- Fix Suggestion:
+  • Double-check Paddle credentials in environment variables or secrets.
+  • Verify product ID exists and is active in Paddle dashboard.
+  • Test using Paddle's test mode or live API with webhook URL properly set.
+
+------------------------------------------------------

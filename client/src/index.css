@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SecureShare - Gmail-inspired dark file sharing platform design system */
+
+@layer base {
+  :root {
+    /* Gmail-inspired dark theme colors */
+    --background: 220 13% 9%;
+    --foreground: 213 31% 91%;
+
+    --card: 220 13% 11%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 220 13% 11%;
+    --popover-foreground: 213 31% 91%;
+
+    /* Blue accent inspired by Gmail's blue theme */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 13% 9%;
+
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 220 13% 15%;
+    --accent-foreground: 213 31% 91%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 213 31% 91%;
+
+    --warning: 45 93% 58%;
+    --warning-foreground: 220 13% 9%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 213 31% 91%;
+
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 217 91% 60%;
+
+    --radius: 8px;
+
+    /* Sidebar colors for navigation */
+    --sidebar-background: 220 13% 8%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 13% 9%;
+    --sidebar-accent: 220 13% 12%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 220 13% 15%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Custom design tokens */
+    --primary-glow: 217 91% 70%;
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 13% 11%), hsl(220 13% 9%));
+    --shadow-elegant: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
+    --shadow-glow: 0 0 40px hsl(217 91% 70% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* File type colors */
+    --file-pdf: 0 84% 60%;
+    --file-image: 142 76% 36%;
+    --file-video: 262 83% 58%;
+    --file-audio: 45 93% 58%;
+    --file-document: 217 91% 60%;
+    --file-archive: 33 84% 60%;
+    --file-code: 142 76% 36%;
+    --file-default: 215 20% 65%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 9%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 31% 91%;
+    --secondary-foreground: 220 13% 9%;
+
+    --muted: 213 31% 91%;
+    --muted-foreground: 215 20% 35%;
+
+    --accent: 213 31% 91%;
+    --accent-foreground: 220 13% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 31% 85%;
+    --input: 213 31% 85%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 13% 9%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 31% 91%;
+    --sidebar-accent-foreground: 220 13% 9%;
+    --sidebar-border: 213 31% 85%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
